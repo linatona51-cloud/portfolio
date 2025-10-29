@@ -1,81 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>𝕻𝖔𝖗𝖙𝖋𝖔𝖑𝖎𝖔</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for a cleaner font and scroll behavior */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for aesthetics */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #4f46e5; /* Indigo-600 */
+            border-radius: 4px;
+        }
+        body::-webkit-scrollbar-track {
+            background: #111827; /* Gray-900 */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#111827',
+                        'secondary-dark': '#1f2937',
+                        'accent-indigo': '#4f46e5',
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-  <header>
-    <div class="container">
-      <h1 class="logo">𝙻𝚒𝚗𝚊𝚑'𝚜 𝚙𝚘𝚛𝚝𝚏𝚘𝚕𝚒𝚘</h1>
-      <nav id="nav">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">&#9776;</div>
-      </nav>
-    </div>
-  </header>
+<body class="bg-primary-dark text-gray-200">
 
-  <section class="hero">
-    <div class="container">
-      <img src="./images/Snapchat-293954438.jpg" alt="logo">
-      <h2>𝖧𝖾𝗅𝗅𝗈, 𝖨'𝗆 𝖳𝗈𝗇𝖺 𝖫𝗂𝗇𝖺𝗁</h2>
-      <p>Creative Web Developer & Designer</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="container">
-      <h2>𝙰𝚋𝚘𝚞𝚝 𝙼𝚎✍🏾</h2>
-      <p>I'm a creative thinker with a passion for designing new things and bringing fresh ideas to life. Whether it's exploring new tools, experimenting with styles, or diving into a new challenge, I’m always excited to learn and grow. My work blends curiosity with creativity, and I'm driven by the thrill of turning ideas into something real, meaningful, and visually impactful.</p>
-      <p>Beyond design and coding, I’m deeply interested in how technology can connect people and spark positive change. I enjoy collaborating with others, solving complex problems, and transforming visions into interactive experiences. Every project I take on is an opportunity to improve my skills, embrace creativity, and inspire others through innovation.</p>
-      <p>When I’m not working on a new project, you’ll probably find me listening to music 🎧, exploring inspiring portfolios, or brainstorming new design concepts. My goal is to keep evolving both as a developer and a creator while leaving a lasting digital footprint.</p>
-    </div>
-  </section>
-
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>Project One</h3>
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-secondary-dark/95 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold text-accent-indigo">Tona Linah🌸</a>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="text-gray-300 hover:text-white transition duration-150">Projects</a>
+                    <a href="#education" class="text-gray-300 hover:text-white transition duration-150">Education</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white transition duration-150">Skills</a>
+                    <a href="#contact" class="hidden sm:block text-gray-300 hover:text-white transition duration-150">Contact</a>
+                </div>
+            </div>
         </div>
-        <div class="project-card">
-          <h3>Project Two</h3>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- 1. Hero / Introduction Section -->
+        <section id="hero" class="text-center py-16 md:py-24">
+            <!-- Profile Image Placeholder (Replace with your own image URL) -->
+            <img src="https://placehold.co/150x150/1f2937/ffffff?text=JD" alt="Profile Picture" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-4 border-accent-indigo shadow-xl mb-6">
+
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4">
+                Hello, I'm <span class="text-accent-indigo">Tona Linah🎇</span>
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-400 font-light mb-8">
+                Senior Full-Stack Developer & Technical Lead
+            </p>
+
+            <!-- Professional Summary -->
+            <p class="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed">
+                A highly motivated and results-driven professional with 8+ years of experience in designing, developing, and deploying scalable web applications. Expert in modern frameworks and dedicated to creating clean, maintainable, and efficient code. I thrive on solving complex problems and leading dynamic teams to successful project completion.
+            </p>
+        </section>
+
+        <!-- 2. Projects / Work Showcase -->
+        <section id="projects" class="pt-8">
+            <h2 class="text-4xl font-bold text-white mb-10 border-b-2 border-accent-indigo pb-2 inline-block">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Project Card 1 -->
+                <div class="bg-secondary-dark p-6 rounded-xl shadow-2xl hover:shadow-accent-indigo/50 transition duration-300 transform hover:-translate-y-1">
+                    <!-- Image Placeholder (Aspect Ratio 16:9) -->
+                    <img src="https://placehold.co/600x337/374151/ffffff?text=Project+One" alt="Project One" class="rounded-lg mb-4 w-full h-auto object-cover border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-white mb-2">E-Commerce Platform Redesign</h3>
+                    <p class="text-gray-400 mb-4">Led the front end development of a high traffic e commerce site, resulting in a 30% reduction in bounce rate and a 15% increase in conversion.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-indigo-700/50 text-indigo-200 px-3 py-1 rounded-full font-medium">React</span>
+                        <span class="text-xs bg-indigo-700/50 text-indigo-200 px-3 py-1 rounded-full font-medium">Node.js</span>
+                        <span class="text-xs bg-indigo-700/50 text-indigo-200 px-3 py-1 rounded-full font-medium">MongoDB</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-secondary-dark p-6 rounded-xl shadow-2xl hover:shadow-accent-indigo/50 transition duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x337/374151/ffffff?text=Project+Two" alt="Project Two" class="rounded-lg mb-4 w-full h-auto object-cover border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Real-Time Data Dashboard</h3>
+                    <p class="text-gray-400 mb-4">Engineered a scalable WebSocket-based dashboard to visualize millions of data points in real-time for executive decision-making.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-indigo-700/50 text-indigo-200 px-3 py-1 rounded-full font-medium">Vue.js</span>
+                        <span class="text-xs bg-indigo-700/50 text-indigo-200 px-3 py-1 rounded-full font-medium">Python (Flask)</span>
+                        <span class="text-xs bg-indigo-700/50 text-indigo-200 px-3 py-1 rounded-full font-medium">Redis</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-secondary-dark p-6 rounded-xl shadow-2xl hover:shadow-accent-indigo/50 transition duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x337/374151/ffffff?text=Project+Three" alt="Project Three" class="rounded-lg mb-4 w-full h-auto object-cover border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Mobile API Development</h3>
+                    <p class="text-gray-400 mb-4">Designed and documented RESTful APIs for a cross-platform mobile application, supporting over 100,000 monthly active users.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-indigo-700/50 text-indigo-200 px-3 py-1 rounded-full font-medium">Java (Spring)</span>
+                        <span class="text-xs bg-indigo-700/50 text-indigo-200 px-3 py-1 rounded-full font-medium">PostgreSQL</span>
+                        <span class="text-xs bg-indigo-700/50 text-indigo-200 px-3 py-1 rounded-full font-medium">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Education / Degrees -->
+        <section id="education" class="pt-8">
+            <h2 class="text-4xl font-bold text-white mb-10 border-b-2 border-accent-indigo pb-2 inline-block">Education & Qualifications</h2>
+            <div class="space-y-8">
+                <!-- Degree 1 -->
+                <div class="bg-secondary-dark p-6 rounded-xl shadow-lg border-l-4 border-accent-indigo">
+                    <div class="flex justify-between items-start flex-col sm:flex-row">
+                        <h3 class="text-2xl font-semibold text-white">Master of Science in Computer Science</h3>
+                        <span class="text-accent-indigo font-medium sm:text-right mt-2 sm:mt-0">2020 — 2025</span>
+                    </div>
+                    <p class="text-lg text-gray-300">Massachusetts Institute of Technology (MIT)</p>
+                    <p class="text-gray-400 mt-2">Specialization in Distributed Systems. Thesis on scalable cloud infrastructure.</p>
+                </div>
+
+                <!-- Degree 2 -->
+                <div class="bg-secondary-dark p-6 rounded-xl shadow-lg border-l-4 border-accent-indigo">
+                    <div class="flex justify-between items-start flex-col sm:flex-row">
+                        <h3 class="text-2xl font-semibold text-white">Bachelor of Engineering in Electrical Engineering</h3>
+                        <span class="text-accent-indigo font-medium sm:text-right mt-2 sm:mt-0">2020 — 2025</span>
+                    </div>
+                    <p class="text-lg text-gray-300">Stanford University</p>
+                    <p class="text-gray-400 mt-2">Focused on signal processing and embedded systems. Graduated with Honors.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Achievements / Awards & Certifications -->
+        <section id="achievements" class="pt-8">
+            <h2 class="text-4xl font-bold text-white mb-10 border-b-2 border-accent-indigo pb-2 inline-block">Awards & Key Achievements</h2>
+            <div class="space-y-6">
+                <!-- Achievement 1 -->
+                <div class="flex items-start bg-secondary-dark p-4 rounded-xl shadow-md">
+                    <span class="text-accent-indigo text-2xl mr-4">&#9733;</span> <!-- Star Icon -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Innovator of the Year Award - 2024</h3>
+                        <p class="text-gray-400">Awarded by ACME Corp for leading the development of the proprietary machine learning service that increased company revenue by 12%.</p>
+                    </div>
+                </div>
+                <!-- Achievement 2 -->
+                <div class="flex items-start bg-secondary-dark p-4 rounded-xl shadow-md">
+                    <span class="text-accent-indigo text-2xl mr-4">&#9733;</span>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Certified Kubernetes Administrator (CKA)</h3>
+                        <p class="text-gray-400">Successfully obtained CKA certification in Q1 2022, demonstrating advanced proficiency in managing containerized applications.</p>
+                    </div>
+                </div>
+                <!-- Achievement 3 -->
+                <div class="flex items-start bg-secondary-dark p-4 rounded-xl shadow-md">
+                    <span class="text-accent-indigo text-2xl mr-4">&#9733;</span>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Open Source Contributor</h3>
+                        <p class="text-gray-400">Top 50 contributor to the popular 'Awesome-Framework' GitHub repository in 2021.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Skills Section (Technical & Soft) -->
+        <section id="skills" class="pt-8">
+            <h2 class="text-4xl font-bold text-white mb-10 border-b-2 border-accent-indigo pb-2 inline-block">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                <!-- Technical Skills -->
+                <div class="bg-secondary-dark p-6 rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-accent-indigo mb-4">Technical Stack</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-indigo-800 text-white rounded-full text-sm font-medium shadow-lg">React/Next.js</span>
+                        <span class="px-4 py-2 bg-indigo-800 text-white rounded-full text-sm font-medium shadow-lg">Python/Django</span>
+                        <span class="px-4 py-2 bg-indigo-800 text-white rounded-full text-sm font-medium shadow-lg">AWS/CloudFormation</span>
+                        <span class="px-4 py-2 bg-indigo-800 text-white rounded-full text-sm font-medium shadow-lg">Go/Rust</span>
+                        <span class="px-4 py-2 bg-indigo-800 text-white rounded-full text-sm font-medium shadow-lg">PostgreSQL/Redis</span>
+                        <span class="px-4 py-2 bg-indigo-800 text-white rounded-full text-sm font-medium shadow-lg">Kubernetes/Docker</span>
+                        <span class="px-4 py-2 bg-indigo-800 text-white rounded-full text-sm font-medium shadow-lg">Tailwind CSS</span>
+                    </div>
+                </div>
+
+             
+                <div class="bg-secondary-dark p-6 rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-accent-indigo mb-4">Soft Skills</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                        <li>Cross-functional Team Leadership</li>
+                        <li>Complex Problem Solving</li>
+                        <li>Agile/Scrum Methodology</li>
+                        <li>Technical Mentoring and Coaching</li>
+                        <li>Effective Client Communication</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Contact Section -->
+        <section id="contact" class="pt-8 text-center pb-12">
+            <h2 class="text-4xl font-bold text-white mb-10 border-b-2 border-accent-indigo pb-2 inline-block">Get In Touch</h2>
+            <p class="text-lg text-gray-300 mb-8">
+                I'm currently open to new opportunities and exciting collaborations. Feel free to reach out!
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                <!-- Email -->
+                <a href="mailto:johndoe@example.com" class="bg-accent-indigo text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-600 transition duration-300">
+                    Email Me
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/johndoe" target="_blank" class="bg-gray-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-600 transition duration-300">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-dark border-t border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <p>&copy; 2025 Tona linah🎀. All rights reserved. | Built with Tailwind CSS.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message💬</button>
-      </form>
-    </div>
-  </section>
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 𝖳𝗈𝗇𝖺 𝗅𝗂𝗇𝖺𝗁. All rights reserved.</p>
-      <p>Made with ❤️ by Linah blending creativity, passion, and code to bring ideas to life.</p>
-      <div class="social-links">
-        <a href="https://github.com/" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/" target="_blank">LinkedIn</a> |
-        <a href="mailto:your-email@example.com">Email</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    </footer>
 </body>
 </html>
